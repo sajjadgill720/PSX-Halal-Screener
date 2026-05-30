@@ -8,6 +8,7 @@ commonly tracked PSX names and caches fetched rows on disk for 24 hours.
 from __future__ import annotations
 
 import pickle
+from concurrent.futures import ThreadPoolExecutor, wait
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Iterable
@@ -88,16 +89,42 @@ def get_psx_data(tickers: list) -> pd.DataFrame:
 
     cached_rows = _load_cache()
     rows: list[dict] = []
+    row_map: dict[str, dict] = {}
     updated_cache = False
+
+    pending_tickers: list[str] = []
 
     for ticker in normalized_tickers:
         cached_row = _find_cached_row(cached_rows, ticker)
         if cached_row is not None:
-            rows.append(cached_row)
+            row_map[ticker] = cached_row
             continue
 
-        rows.append(_fetch_company_row(ticker))
-        updated_cache = True
+        pending_tickers.append(ticker)
+
+    if pending_tickers:
+        max_workers = min(8, len(pending_tickers))
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            future_map = {executor.submit(_fetch_company_row, ticker): ticker for ticker in pending_tickers}
+            done, not_done = wait(future_map.keys(), timeout=45)
+
+            for future in done:
+                ticker = future_map[future]
+                try:
+                    row_map[ticker] = future.result()
+                except Exception:
+                    row_map[ticker] = _empty_company_row(ticker)
+                updated_cache = True
+
+            for future in not_done:
+                ticker = future_map[future]
+                future.cancel()
+                row_map[ticker] = _empty_company_row(ticker)
+                updated_cache = True
+
+    for ticker in normalized_tickers:
+        if ticker in row_map:
+            rows.append(row_map[ticker])
 
     result = pd.DataFrame(rows)
     if result.empty:
@@ -136,10 +163,10 @@ def _fetch_company_row(ticker: str) -> dict:
     except Exception:
         company = None
 
-    info = _safe_dict(getattr(company, "info", None)) if company is not None else {}
-    fast_info = _safe_dict(getattr(company, "fast_info", None)) if company is not None else {}
-    balance_sheet = _safe_frame(getattr(company, "balance_sheet", None)) if company is not None else pd.DataFrame()
-    income_stmt = _safe_frame(getattr(company, "income_stmt", None)) if company is not None else pd.DataFrame()
+    info = _safe_dict(_safe_getattr(company, "info"))
+    fast_info = _safe_dict(_safe_getattr(company, "fast_info"))
+    balance_sheet = _safe_frame(_safe_getattr(company, "balance_sheet"))
+    income_stmt = _safe_frame(_safe_getattr(company, "income_stmt"))
 
     total_debt = _coalesce(
         info.get("totalDebt"),
@@ -230,6 +257,41 @@ def _fetch_company_row(ticker: str) -> dict:
     }
 
 
+def _empty_company_row(ticker: str) -> dict:
+    """Return a placeholder row when a ticker cannot be fetched in time."""
+
+    base_ticker = _strip_suffix(ticker)
+    yahoo_ticker = _ensure_suffix(base_ticker)
+    sector = PSX_TICKERS.get(base_ticker, {}).get("sector", "Unknown")
+
+    return {
+        "ticker": base_ticker,
+        "yahoo_ticker": yahoo_ticker,
+        "sector": sector,
+        "is_haram_sector": sector in HARAM_SECTORS,
+        "total_debt": np.nan,
+        "total_assets": np.nan,
+        "interest_income": np.nan,
+        "total_revenue": np.nan,
+        "accounts_receivable": np.nan,
+        "cash_and_equivalents": np.nan,
+        "market_cap": np.nan,
+        "current_price": np.nan,
+    }
+
+
+def _safe_getattr(obj: object, attribute: str) -> object:
+    """Return an attribute value while swallowing network-backed lookup errors."""
+
+    if obj is None:
+        return None
+
+    try:
+        return getattr(obj, attribute)
+    except Exception:
+        return None
+
+
 def _load_cache() -> pd.DataFrame:
     if not _CACHE_PATH.exists():
         return pd.DataFrame()
@@ -248,6 +310,9 @@ def _load_cache() -> pd.DataFrame:
 
     if not isinstance(data, pd.DataFrame) or not isinstance(cached_at, datetime):
         return pd.DataFrame()
+
+    if data.columns.duplicated().any():
+        data = data.loc[:, ~data.columns.duplicated()].copy()
 
     if datetime.now(timezone.utc) - cached_at > _CACHE_TTL:
         return pd.DataFrame()
@@ -270,8 +335,16 @@ def _find_cached_row(cached_rows: pd.DataFrame, ticker: str) -> dict | None:
     if cached_rows.empty or "ticker" not in cached_rows.columns:
         return None
 
+    ticker_frame = cached_rows.loc[:, cached_rows.columns == "ticker"]
+    if ticker_frame.empty:
+        return None
+
+    ticker_series = ticker_frame.iloc[:, 0]
+    if not isinstance(ticker_series, pd.Series):
+        return None
+
     base_ticker = _strip_suffix(ticker)
-    match = cached_rows.loc[cached_rows["ticker"] == base_ticker]
+    match = cached_rows.loc[ticker_series == base_ticker]
     if match.empty:
         return None
 
