@@ -1,0 +1,1340 @@
+2026-05-31 21:19:25,433 | ERROR | yfinance research lookup failed for ENGRO
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 281, in research_unknown_stock
+    info = _safe_dict(_safe_getattr(company, "info"))
+           ^^^^^^^^^^
+NameError: name '_safe_dict' is not defined
+2026-05-31 21:19:25,434 | ERROR | yfinance research error for ENGRO: name '_safe_dict' is not defined
+2026-05-31 21:21:10,599 | ERROR | yfinance research lookup failed for ENGRO.KA
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 526, in _fetch_yfinance_research_context
+    info = _safe_dict(_safe_getattr(company, "info"))
+           ^^^^^^^^^^
+NameError: name '_safe_dict' is not defined
+2026-05-31 21:21:10,617 | ERROR | yfinance research error for ENGRO.KA: name '_safe_dict' is not defined
+2026-05-31 21:56:16,923 | ERROR | News search failed for ENGRO
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 1106, in _validate_conn
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connection.py", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+        sock=sock,
+    ...<14 lines>...
+        assert_fingerprint=self.assert_fingerprint,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connection.py", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+        sock=sock,
+    ...<8 lines>...
+        tls_in_tls=tls_in_tls,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\ssl_.py", line 433, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\ssl_.py", line 477, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sock=sock,
+        ^^^^^^^^^^
+    ...<5 lines>...
+        session=session
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1076, in _create
+    self.do_handshake()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1372, in do_handshake
+    self._sslobj.do_handshake()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\adapters.py", line 696, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\retry.py", line 498, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 1106, in _validate_conn
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connection.py", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+        sock=sock,
+    ...<14 lines>...
+        assert_fingerprint=self.assert_fingerprint,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connection.py", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+        sock=sock,
+    ...<8 lines>...
+        tls_in_tls=tls_in_tls,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\ssl_.py", line 433, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\ssl_.py", line 477, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sock=sock,
+        ^^^^^^^^^^
+    ...<5 lines>...
+        session=session
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1076, in _create
+    self.do_handshake()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1372, in do_handshake
+    self._sslobj.do_handshake()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 9, in _req
+    resp = get(
+        url="https://www.google.com/search",
+    ...<10 lines>...
+        timeout=timeout,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\adapters.py", line 711, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2026-05-31 21:56:17,243 | ERROR | News search error for ENGRO: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2026-05-31 21:56:15,525 | ERROR | research search lookup failed for ENGRO
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 1106, in _validate_conn
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connection.py", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+        sock=sock,
+    ...<14 lines>...
+        assert_fingerprint=self.assert_fingerprint,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connection.py", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+        sock=sock,
+    ...<8 lines>...
+        tls_in_tls=tls_in_tls,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\ssl_.py", line 433, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\ssl_.py", line 477, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sock=sock,
+        ^^^^^^^^^^
+    ...<5 lines>...
+        session=session
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1076, in _create
+    self.do_handshake()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1372, in do_handshake
+    self._sslobj.do_handshake()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\adapters.py", line 696, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\retry.py", line 498, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 1106, in _validate_conn
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connection.py", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+        sock=sock,
+    ...<14 lines>...
+        assert_fingerprint=self.assert_fingerprint,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connection.py", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+        sock=sock,
+    ...<8 lines>...
+        tls_in_tls=tls_in_tls,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\ssl_.py", line 433, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\ssl_.py", line 477, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sock=sock,
+        ^^^^^^^^^^
+    ...<5 lines>...
+        session=session
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1076, in _create
+    self.do_handshake()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1372, in do_handshake
+    self._sslobj.do_handshake()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 292, in research_unknown_stock
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 9, in _req
+    resp = get(
+        url="https://www.google.com/search",
+    ...<10 lines>...
+        timeout=timeout,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\adapters.py", line 711, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2026-05-31 21:56:17,244 | ERROR | research search error for ENGRO: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2026-05-31 21:56:17,255 | ERROR | Search lookup failed for ENGRO
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 1106, in _validate_conn
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connection.py", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+        sock=sock,
+    ...<14 lines>...
+        assert_fingerprint=self.assert_fingerprint,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connection.py", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+        sock=sock,
+    ...<8 lines>...
+        tls_in_tls=tls_in_tls,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\ssl_.py", line 433, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\ssl_.py", line 477, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sock=sock,
+        ^^^^^^^^^^
+    ...<5 lines>...
+        session=session
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1076, in _create
+    self.do_handshake()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1372, in do_handshake
+    self._sslobj.do_handshake()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\adapters.py", line 696, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\retry.py", line 498, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 1106, in _validate_conn
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connection.py", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+        sock=sock,
+    ...<14 lines>...
+        assert_fingerprint=self.assert_fingerprint,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connection.py", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+        sock=sock,
+    ...<8 lines>...
+        tls_in_tls=tls_in_tls,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\ssl_.py", line 433, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\ssl_.py", line 477, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sock=sock,
+        ^^^^^^^^^^
+    ...<5 lines>...
+        session=session
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1076, in _create
+    self.do_handshake()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1372, in do_handshake
+    self._sslobj.do_handshake()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 100, in classify_sector_with_search
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 9, in _req
+    resp = get(
+        url="https://www.google.com/search",
+    ...<10 lines>...
+        timeout=timeout,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\adapters.py", line 711, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2026-05-31 21:56:17,296 | ERROR | Search error for ENGRO: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2026-05-31 21:56:17,530 | ERROR | research search lookup failed for ENGRO
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 1106, in _validate_conn
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connection.py", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+        sock=sock,
+    ...<14 lines>...
+        assert_fingerprint=self.assert_fingerprint,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connection.py", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+        sock=sock,
+    ...<8 lines>...
+        tls_in_tls=tls_in_tls,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\ssl_.py", line 433, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\ssl_.py", line 477, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sock=sock,
+        ^^^^^^^^^^
+    ...<5 lines>...
+        session=session
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1076, in _create
+    self.do_handshake()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1372, in do_handshake
+    self._sslobj.do_handshake()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\adapters.py", line 696, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\retry.py", line 498, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 1106, in _validate_conn
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connection.py", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+        sock=sock,
+    ...<14 lines>...
+        assert_fingerprint=self.assert_fingerprint,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connection.py", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+        sock=sock,
+    ...<8 lines>...
+        tls_in_tls=tls_in_tls,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\ssl_.py", line 433, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\ssl_.py", line 477, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sock=sock,
+        ^^^^^^^^^^
+    ...<5 lines>...
+        session=session
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1076, in _create
+    self.do_handshake()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1372, in do_handshake
+    self._sslobj.do_handshake()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 543, in _search_research_snippets
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 9, in _req
+    resp = get(
+        url="https://www.google.com/search",
+    ...<10 lines>...
+        timeout=timeout,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\adapters.py", line 711, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2026-05-31 21:56:17,575 | ERROR | research search error for ENGRO: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2026-05-31 21:56:17,554 | ERROR | Search lookup failed for LUCKY
+Traceback (most recent call last):
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 1106, in _validate_conn
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connection.py", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+        sock=sock,
+    ...<14 lines>...
+        assert_fingerprint=self.assert_fingerprint,
+    )
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connection.py", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+        sock=sock,
+    ...<8 lines>...
+        tls_in_tls=tls_in_tls,
+    )
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\ssl_.py", line 433, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\ssl_.py", line 477, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sock=sock,
+        ^^^^^^^^^^
+    ...<5 lines>...
+        session=session
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1076, in _create
+    self.do_handshake()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1372, in do_handshake
+    self._sslobj.do_handshake()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\adapters.py", line 696, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\retry.py", line 498, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 1106, in _validate_conn
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connection.py", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+        sock=sock,
+    ...<14 lines>...
+        assert_fingerprint=self.assert_fingerprint,
+    )
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connection.py", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+        sock=sock,
+    ...<8 lines>...
+        tls_in_tls=tls_in_tls,
+    )
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\ssl_.py", line 433, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\ssl_.py", line 477, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sock=sock,
+        ^^^^^^^^^^
+    ...<5 lines>...
+        session=session
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1076, in _create
+    self.do_handshake()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1372, in do_handshake
+    self._sslobj.do_handshake()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 9, in _req
+    resp = get(
+        url="https://www.google.com/search",
+    ...<10 lines>...
+        timeout=timeout,
+    )
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\adapters.py", line 711, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2026-05-31 21:56:17,595 | ERROR | Search error for LUCKY: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2026-05-31 21:59:52,991 | ERROR | News search failed for ENGRO
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1304, in recv_into
+    return self.read(nbytes, buffer)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\Sajjad Ur Rehman\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1138, in read
+    return self._sslobj.read(len, buffer)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\adapters.py", line 696, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\retry.py", line 498, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\urllib3\connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+        self, url, f"Read timed out. (read timeout={timeout_value})"
+    ) from err
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='www.google.com', port=443): Read timed out. (read timeout=5)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 9, in _req
+    resp = get(
+        url="https://www.google.com/search",
+    ...<10 lines>...
+        timeout=timeout,
+    )
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\adapters.py", line 742, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='www.google.com', port=443): Read timed out. (read timeout=5)
+2026-05-31 21:59:53,074 | ERROR | News search error for ENGRO: HTTPSConnectionPool(host='www.google.com', port=443): Read timed out. (read timeout=5)
+2026-05-31 22:00:43,479 | ERROR | News search failed for LUCKY
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DLUCKY%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGLvS8dAGIjCq-IW7oPG7jUOKChmVaPhfMQd3pEsphBeJ5ghFQjKOd468wkamoICYPEfC7wkw8HAyBmpjbmRyUloBQw
+2026-05-31 22:00:43,515 | ERROR | News search error for LUCKY: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DLUCKY%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGLvS8dAGIjCq-IW7oPG7jUOKChmVaPhfMQd3pEsphBeJ5ghFQjKOd468wkamoICYPEfC7wkw8HAyBmpjbmRyUloBQw
+2026-05-31 22:00:43,645 | ERROR | News search failed for ENGRO
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DEngro%252BCorporation%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGLvS8dAGIjDBJbNJYtkriMYHhKu3IIlFVuLI8OYYxQd0q2GzeFLUilEQCKLUwDAjLpghCrt6RbIyBmpjbmRyUloBQw
+2026-05-31 22:00:43,651 | ERROR | News search error for ENGRO: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DEngro%252BCorporation%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGLvS8dAGIjDBJbNJYtkriMYHhKu3IIlFVuLI8OYYxQd0q2GzeFLUilEQCKLUwDAjLpghCrt6RbIyBmpjbmRyUloBQw
+2026-05-31 22:00:44,270 | ERROR | News search failed for ENGRO
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DEngro%252BCorporation%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGLzS8dAGIjBqmEcQNgA8_HEKGQ48j8QEv5xp9Ct45zlt5kFk_-6hoZFgqIiKg2IU4g2KaIU2aJQyBmpjbmRyUloBQw
+2026-05-31 22:00:44,272 | ERROR | News search error for ENGRO: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DEngro%252BCorporation%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGLzS8dAGIjBqmEcQNgA8_HEKGQ48j8QEv5xp9Ct45zlt5kFk_-6hoZFgqIiKg2IU4g2KaIU2aJQyBmpjbmRyUloBQw
+2026-05-31 22:05:03,134 | ERROR | News search failed for ENGRO
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DEngro%252BCorporation%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGL7U8dAGIjCowSg7oKa2frgDIOs2W2kJoiyADgYujtHc9M7G1myfQ9fLJxGsQTlTu8gLOFLz5IMyBmpjbmRyUloBQw
+2026-05-31 22:05:03,136 | ERROR | News search error for ENGRO: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DEngro%252BCorporation%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGL7U8dAGIjCowSg7oKa2frgDIOs2W2kJoiyADgYujtHc9M7G1myfQ9fLJxGsQTlTu8gLOFLz5IMyBmpjbmRyUloBQw
+2026-06-01 01:52:00,500 | ERROR | News search failed for 786
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3D786%252BInvestments%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGPC-8tAGIjC13TLFZcGkTurhkt5WxyJzYC7xn2sLxY1Owh0KCXJEp1xWbZWMRt29dto9fol9Qr4yBmpjbmRyUloBQw
+2026-06-01 01:52:00,503 | ERROR | News search error for 786: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3D786%252BInvestments%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGPC-8tAGIjC13TLFZcGkTurhkt5WxyJzYC7xn2sLxY1Owh0KCXJEp1xWbZWMRt29dto9fol9Qr4yBmpjbmRyUloBQw
+2026-06-01 01:52:01,102 | ERROR | News search failed for 786
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3D786%252BInvestments%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGPG-8tAGIjAQ8UQwfMAy5s4WJyImK5c8adu9z1C20ifheuAW2HgmNH1xgS3ePEWmyeRjTA4yvOUyBmpjbmRyUloBQw
+2026-06-01 01:52:01,107 | ERROR | News search error for 786: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3D786%252BInvestments%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGPG-8tAGIjAQ8UQwfMAy5s4WJyImK5c8adu9z1C20ifheuAW2HgmNH1xgS3ePEWmyeRjTA4yvOUyBmpjbmRyUloBQw
+2026-06-01 01:54:28,193 | ERROR | News search failed for 786
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3D786%252BInvestments%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGITA8tAGIjCo2x1nd8ZSljHixEthFAEsmyhaqBjuQly9jsaqpAETlaZOHGDaVMVohwvKct1C1nIyBmpjbmRyUloBQw
+2026-06-01 01:54:28,197 | ERROR | News search error for 786: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3D786%252BInvestments%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGITA8tAGIjCo2x1nd8ZSljHixEthFAEsmyhaqBjuQly9jsaqpAETlaZOHGDaVMVohwvKct1C1nIyBmpjbmRyUloBQw
+2026-06-01 01:54:35,218 | ERROR | News search failed for AABS
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAl-Abbas%252BSugar%252BMills%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGIvA8tAGIjBDsyW7jb-koHXHdAQOhKVe-XnFPNzPHPRKuFGrVjBYdjOuXPUhPXlW9vToce4enG0yBmpjbmRyUloBQw
+2026-06-01 01:54:35,221 | ERROR | News search error for AABS: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAl-Abbas%252BSugar%252BMills%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGIvA8tAGIjBDsyW7jb-koHXHdAQOhKVe-XnFPNzPHPRKuFGrVjBYdjOuXPUhPXlW9vToce4enG0yBmpjbmRyUloBQw
+2026-06-01 01:54:41,406 | ERROR | News search failed for AAL
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAgro%252BAllianz%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGJHA8tAGIjDmBWM-9IIkLPAD5bSOlt058vfvllyVQkqYw7CMDPg4LM42LrHek-UeQQbibkCpwDsyBmpjbmRyUloBQw
+2026-06-01 01:54:41,410 | ERROR | News search error for AAL: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAgro%252BAllianz%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGJHA8tAGIjDmBWM-9IIkLPAD5bSOlt058vfvllyVQkqYw7CMDPg4LM42LrHek-UeQQbibkCpwDsyBmpjbmRyUloBQw
+2026-06-01 01:54:47,322 | ERROR | News search failed for AASM
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAl-Abid%252BSilk%252BMills%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGJfA8tAGIjDAbzw_nVNeucnLTcs031kcLIwtsXLajNl3g9mjBrfFo9-cxAirfV_ppl6mfpAxb_UyBmpjbmRyUloBQw
+2026-06-01 01:54:47,324 | ERROR | News search error for AASM: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAl-Abid%252BSilk%252BMills%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGJfA8tAGIjDAbzw_nVNeucnLTcs031kcLIwtsXLajNl3g9mjBrfFo9-cxAirfV_ppl6mfpAxb_UyBmpjbmRyUloBQw
+2026-06-01 01:54:53,281 | ERROR | News search failed for AATM
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAli%252BAsghar%252BTextile%252BMills%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGJ3A8tAGIjDGC7UD8IgNrN8lbe5GfHU2RLHcfTCVEGuPLr_Vaq6VQLze2BBUGPn4dKdmE_BxBggyBmpjbmRyUloBQw
+2026-06-01 01:54:53,284 | ERROR | News search error for AATM: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAli%252BAsghar%252BTextile%252BMills%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGJ3A8tAGIjDGC7UD8IgNrN8lbe5GfHU2RLHcfTCVEGuPLr_Vaq6VQLze2BBUGPn4dKdmE_BxBggyBmpjbmRyUloBQw
+2026-06-01 01:54:59,042 | ERROR | News search failed for ABL
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAllied%252BBank%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGKPA8tAGIjAmNeJFem5DPZNt6UO0vgW__ZBfm6Vwfm6XR1fH7EhT0amSfpIcZLFrkM75xWxuuCYyBmpjbmRyUloBQw
+2026-06-01 01:54:59,045 | ERROR | News search error for ABL: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAllied%252BBank%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGKPA8tAGIjAmNeJFem5DPZNt6UO0vgW__ZBfm6Vwfm6XR1fH7EhT0amSfpIcZLFrkM75xWxuuCYyBmpjbmRyUloBQw
+2026-06-01 01:55:05,385 | ERROR | News search failed for ABOT
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAbbott%252BLaboratories%252B%2528Pakistan%2529%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGKnA8tAGIjAymBGNqxZgT4jMyj8BeC5aWt-655zb7m786Jx5zsr3P80VXGOzX1IkxbgQH8kVhyUyBmpjbmRyUloBQw
+2026-06-01 01:55:05,387 | ERROR | News search error for ABOT: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAbbott%252BLaboratories%252B%2528Pakistan%2529%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGKnA8tAGIjAymBGNqxZgT4jMyj8BeC5aWt-655zb7m786Jx5zsr3P80VXGOzX1IkxbgQH8kVhyUyBmpjbmRyUloBQw
+2026-06-01 01:55:12,205 | ERROR | News search failed for ABSON
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAbson%252BIndustries%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGLDA8tAGIjCvCdVz96dI2FH8jrEZQ6EjhAcTam6LyIPK1Ivh_gaOkOvtqCWRNGqYcW69zqneiCQyBmpjbmRyUloBQw
+2026-06-01 01:55:12,208 | ERROR | News search error for ABSON: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAbson%252BIndustries%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGLDA8tAGIjCvCdVz96dI2FH8jrEZQ6EjhAcTam6LyIPK1Ivh_gaOkOvtqCWRNGqYcW69zqneiCQyBmpjbmRyUloBQw
+2026-06-01 01:55:18,630 | ERROR | News search failed for ACPL
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAttock%252BCement%252BPakistan%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGLfA8tAGIjAF9qWoDjVXs2x8gkdDl3Ob0mLsznsOMAEe8gsZvDDMObNNHBfYQN6S1JvKb2ocBYIyBmpjbmRyUloBQw
+2026-06-01 01:55:18,631 | ERROR | News search error for ACPL: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAttock%252BCement%252BPakistan%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGLfA8tAGIjAF9qWoDjVXs2x8gkdDl3Ob0mLsznsOMAEe8gsZvDDMObNNHBfYQN6S1JvKb2ocBYIyBmpjbmRyUloBQw
+2026-06-01 01:55:24,869 | ERROR | News search failed for ADAMS
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAdam%252BSugar%252BMills%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGL3A8tAGIjB-hCoiBH3kcB_oVVfkEgukxsCxNjoCgldHsJQhNRF5J_60XBw-ImiTTibOdxuOV-UyBmpjbmRyUloBQw
+2026-06-01 01:55:24,872 | ERROR | News search error for ADAMS: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAdam%252BSugar%252BMills%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGL3A8tAGIjB-hCoiBH3kcB_oVVfkEgukxsCxNjoCgldHsJQhNRF5J_60XBw-ImiTTibOdxuOV-UyBmpjbmRyUloBQw
+2026-06-01 01:55:32,886 | ERROR | News search failed for ADMM
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DArtistic%252BDenim%252BMills%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGMXA8tAGIjBn6vxtz5mgOHNB1V9Hy-YN-PoplOhDDecBWQKknrtSeP91wC-vCL-IFTJcrYfX2bwyBmpjbmRyUloBQw
+2026-06-01 01:55:32,887 | ERROR | News search error for ADMM: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DArtistic%252BDenim%252BMills%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGMXA8tAGIjBn6vxtz5mgOHNB1V9Hy-YN-PoplOhDDecBWQKknrtSeP91wC-vCL-IFTJcrYfX2bwyBmpjbmRyUloBQw
+2026-06-01 01:55:39,028 | ERROR | News search failed for ADOS
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAdos%252BPakistan%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGMvA8tAGIjB0c3P99Zwi4bAO746_awkCEKlvB78kzFU-YvViIwmv0ray3h3_fkEpm6uIFE8jDswyBmpjbmRyUloBQw
+2026-06-01 01:55:39,031 | ERROR | News search error for ADOS: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAdos%252BPakistan%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGMvA8tAGIjB0c3P99Zwi4bAO746_awkCEKlvB78kzFU-YvViIwmv0ray3h3_fkEpm6uIFE8jDswyBmpjbmRyUloBQw
+2026-06-01 01:55:45,917 | ERROR | News search failed for ADTM
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAdil%252BTextile%252BMills%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGNLA8tAGIjBLaTaaHqFwQ1xL_4vAU8p5XtBxsLp3Y66HaNLqJuXCm0P-oH6qA-pGJfgA00AShdUyBmpjbmRyUloBQw
+2026-06-01 01:55:45,920 | ERROR | News search error for ADTM: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAdil%252BTextile%252BMills%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGNLA8tAGIjBLaTaaHqFwQ1xL_4vAU8p5XtBxsLp3Y66HaNLqJuXCm0P-oH6qA-pGJfgA00AShdUyBmpjbmRyUloBQw
+2026-06-01 01:55:52,817 | ERROR | News search failed for AEL
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAEL%252BTextile%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGNjA8tAGIjBZOLcDRRRzXYqo1Q9uZ5vELb-2_7XEND2YtkxXw8gSQV6A5CCpAvcaQzebqEgiIRoyBmpjbmRyUloBQw
+2026-06-01 01:55:52,820 | ERROR | News search error for AEL: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAEL%252BTextile%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGNjA8tAGIjBZOLcDRRRzXYqo1Q9uZ5vELb-2_7XEND2YtkxXw8gSQV6A5CCpAvcaQzebqEgiIRoyBmpjbmRyUloBQw
+2026-06-01 01:55:59,038 | ERROR | News search failed for AGHA
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAgha%252BSteel%252BInd.Ltd%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGN_A8tAGIjCBukyjf1ZEfRiwCDS-S8CpWUlEkMpuSA5WT7SlA4ZVLx7sDk1AYI4P1GwV3FevOicyBmpjbmRyUloBQw
+2026-06-01 01:55:59,041 | ERROR | News search error for AGHA: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAgha%252BSteel%252BInd.Ltd%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGN_A8tAGIjCBukyjf1ZEfRiwCDS-S8CpWUlEkMpuSA5WT7SlA4ZVLx7sDk1AYI4P1GwV3FevOicyBmpjbmRyUloBQw
+2026-06-01 01:56:05,748 | ERROR | News search failed for AGIC
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAskari%252BGeneral%252BInsurance%252BCompany%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGObA8tAGIjBAOpE9A5dTUJl__Z7Xt0QEfX1dUmEmlNkD8tDPRmrMzzyWlQDnXbMhbnFuNJND5uwyBmpjbmRyUloBQw
+2026-06-01 01:56:05,751 | ERROR | News search error for AGIC: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAskari%252BGeneral%252BInsurance%252BCompany%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGObA8tAGIjBAOpE9A5dTUJl__Z7Xt0QEfX1dUmEmlNkD8tDPRmrMzzyWlQDnXbMhbnFuNJND5uwyBmpjbmRyUloBQw
+2026-06-01 01:56:12,568 | ERROR | News search failed for AGIL
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAgriauto%252BIndustries%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGO3A8tAGIjAsVenhqfXFzcpAiDYgWBAI2CwzHSMbnpcTwqAJnK5BDLhUMAXhcKJOpZ-hAd-R-UkyBmpjbmRyUloBQw
+2026-06-01 01:56:12,571 | ERROR | News search error for AGIL: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAgriauto%252BIndustries%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGO3A8tAGIjAsVenhqfXFzcpAiDYgWBAI2CwzHSMbnpcTwqAJnK5BDLhUMAXhcKJOpZ-hAd-R-UkyBmpjbmRyUloBQw
+2026-06-01 01:56:19,137 | ERROR | News search failed for AGL
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAgritech%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGPPA8tAGIjAfeT3yx24pjLupUNBJy74Ga9zeGBJdCv2dUNaK0kOBQJT1oMbgTVAj8IbW-n_Bam4yBmpjbmRyUloBQw
+2026-06-01 01:56:19,140 | ERROR | News search error for AGL: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAgritech%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGPPA8tAGIjAfeT3yx24pjLupUNBJy74Ga9zeGBJdCv2dUNaK0kOBQJT1oMbgTVAj8IbW-n_Bam4yBmpjbmRyUloBQw
+2026-06-01 01:56:26,360 | ERROR | News search failed for AGLNCPS
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAgritech%252BNon-Voting%252B%2528Pref%2529%252BClass%252BA%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGPrA8tAGIjDgZhrksmcbeT8PYaZAR2AelcW7_cItPqG6NyLDZD0_t7QnMfc4sjS-TLOWMpq6dpUyBmpjbmRyUloBQw
+2026-06-01 01:56:26,362 | ERROR | News search error for AGLNCPS: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAgritech%252BNon-Voting%252B%2528Pref%2529%252BClass%252BA%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGPrA8tAGIjDgZhrksmcbeT8PYaZAR2AelcW7_cItPqG6NyLDZD0_t7QnMfc4sjS-TLOWMpq6dpUyBmpjbmRyUloBQw
+2026-06-01 01:56:33,051 | ERROR | News search failed for AGP
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAGP%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGIHB8tAGIjAIwnSiHsDhwJNVN21vXVFv914ta4EediGdKCgIrY1PexwULKz_YdiU94VIhpl1cAEyBmpjbmRyUloBQw
+2026-06-01 01:56:33,054 | ERROR | News search error for AGP: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAGP%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGIHB8tAGIjAIwnSiHsDhwJNVN21vXVFv914ta4EediGdKCgIrY1PexwULKz_YdiU94VIhpl1cAEyBmpjbmRyUloBQw
+2026-06-01 01:56:39,301 | ERROR | News search failed for AGSML
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAbdullah%252BShah%252BGhazi%252BSugar%252BMills%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGIfB8tAGIjDhHdv04y9RzxFwWyAB8jUK-bbYj2pFedGNJlXt2bXF_caIrvnOrGwRLVfdOvK_aWQyBmpjbmRyUloBQw
+2026-06-01 01:56:39,303 | ERROR | News search error for AGSML: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAbdullah%252BShah%252BGhazi%252BSugar%252BMills%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGIfB8tAGIjDhHdv04y9RzxFwWyAB8jUK-bbYj2pFedGNJlXt2bXF_caIrvnOrGwRLVfdOvK_aWQyBmpjbmRyUloBQw
+2026-06-01 01:56:47,244 | ERROR | News search failed for AGTL
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAl-Ghazi%252BTractors%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGI_B8tAGIjAyY2HQ-sIZZ5Tc7vnT6t8NB7_i9CmYnQaYPXDuKfoBDC14azKlIb0HuiU3D0CGYwYyBmpjbmRyUloBQw
+2026-06-01 01:56:47,247 | ERROR | News search error for AGTL: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAl-Ghazi%252BTractors%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGI_B8tAGIjAyY2HQ-sIZZ5Tc7vnT6t8NB7_i9CmYnQaYPXDuKfoBDC14azKlIb0HuiU3D0CGYwYyBmpjbmRyUloBQw
+2026-06-01 01:56:54,264 | ERROR | News search failed for AHCL
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DArif%252BHabib%252BCorporation%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGJbB8tAGIjB8VZtrVwYwrKVNXPav_XP-jreJ6Ev8K4aplnJoS8DlehCYyddTmlMNR8ZjxPKLf9UyBmpjbmRyUloBQw
+2026-06-01 01:56:54,267 | ERROR | News search error for AHCL: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DArif%252BHabib%252BCorporation%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGJbB8tAGIjB8VZtrVwYwrKVNXPav_XP-jreJ6Ev8K4aplnJoS8DlehCYyddTmlMNR8ZjxPKLf9UyBmpjbmRyUloBQw
+2026-06-01 01:57:00,513 | ERROR | News search failed for AHL
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DArif%252BHabib%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGJzB8tAGIjBS1aG1mMFxBXiAPU3UjdSWysu2tFrzhHahLRoHYljiQ3_XZBusMf_774yikZ1jWVMyBmpjbmRyUloBQw
+2026-06-01 01:57:00,514 | ERROR | News search error for AHL: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DArif%252BHabib%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGJzB8tAGIjBS1aG1mMFxBXiAPU3UjdSWysu2tFrzhHahLRoHYljiQ3_XZBusMf_774yikZ1jWVMyBmpjbmRyUloBQw
+2026-06-01 01:57:07,252 | ERROR | News search failed for AHTM
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAhmad%252BHassan%252BTextile%252BMills%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGKPB8tAGIjAOxeo4snWKfWhPdSO4bqA7PovbUvxR5LhM8EZDmtFcagpi86G2wfksTjbPOHzBiwcyBmpjbmRyUloBQw
+2026-06-01 01:57:07,256 | ERROR | News search error for AHTM: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAhmad%252BHassan%252BTextile%252BMills%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGKPB8tAGIjAOxeo4snWKfWhPdSO4bqA7PovbUvxR5LhM8EZDmtFcagpi86G2wfksTjbPOHzBiwcyBmpjbmRyUloBQw
+2026-06-01 01:57:14,221 | ERROR | News search failed for AICL
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAdamjee%252BInsurance%252BCompany%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGKrB8tAGIjC874TIjkoRjaDEpS4ECaObPtJVFMCtWrG5qtYcHh-6Fmfj8P7lmtvA_W-U3PJwY9YyBmpjbmRyUloBQw
+2026-06-01 01:57:14,224 | ERROR | News search error for AICL: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAdamjee%252BInsurance%252BCompany%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGKrB8tAGIjC874TIjkoRjaDEpS4ECaObPtJVFMCtWrG5qtYcHh-6Fmfj8P7lmtvA_W-U3PJwY9YyBmpjbmRyUloBQw
+2026-06-01 01:57:20,330 | ERROR | News search failed for AIRLINK
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAir%252BLink%252BCommunication%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGLDB8tAGIjAdRO9Gq855qvgai_cYjch-fkQnjKUkRAyExpdEGcO-0d3XXlEB0GgTeDbw-VfWpYwyBmpjbmRyUloBQw
+2026-06-01 01:57:20,334 | ERROR | News search error for AIRLINK: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAir%252BLink%252BCommunication%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGLDB8tAGIjAdRO9Gq855qvgai_cYjch-fkQnjKUkRAyExpdEGcO-0d3XXlEB0GgTeDbw-VfWpYwyBmpjbmRyUloBQw
+2026-06-01 01:57:27,172 | ERROR | News search failed for AKBL
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAskari%252BBank%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGLfB8tAGIjBFDg2g6DWhkurpdSsV_KfSfPChffniTWFbXVIiNcMBNLBpGGldCdVfOKOXlwNZFIAyBmpjbmRyUloBQw
+2026-06-01 01:57:27,173 | ERROR | News search error for AKBL: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAskari%252BBank%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGLfB8tAGIjBFDg2g6DWhkurpdSsV_KfSfPChffniTWFbXVIiNcMBNLBpGGldCdVfOKOXlwNZFIAyBmpjbmRyUloBQw
+2026-06-01 01:57:33,631 | ERROR | Search lookup failed for AKDCL
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAKD%252BCapital%252BLimited%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGL7B8tAGIjBj5QNzEAqznq1TBmluqNvXJlHjYgr-C_KtIPD0AfhSa9aCAEI2PUPgNA5bn_JHjpkyBmpjbmRyUloBQw
+2026-06-01 01:57:33,636 | ERROR | Search error for AKDCL: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAKD%252BCapital%252BLimited%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGL7B8tAGIjBj5QNzEAqznq1TBmluqNvXJlHjYgr-C_KtIPD0AfhSa9aCAEI2PUPgNA5bn_JHjpkyBmpjbmRyUloBQw
+2026-06-01 01:57:35,692 | ERROR | News search failed for AKDCL
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAKD%252BCapital%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGMDB8tAGIjANi9UMe9uNx2zfzt3AhldoP9tjR9xRq6Kf7ezJOGK3dTolEw0Es9KDM5n4KwfoTYYyBmpjbmRyUloBQw
+2026-06-01 01:57:35,696 | ERROR | News search error for AKDCL: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAKD%252BCapital%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGMDB8tAGIjANi9UMe9uNx2zfzt3AhldoP9tjR9xRq6Kf7ezJOGK3dTolEw0Es9KDM5n4KwfoTYYyBmpjbmRyUloBQw
+2026-06-01 01:57:42,465 | ERROR | News search failed for AKDHL
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAKD%252BHospitality%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGMbB8tAGIjCdPNrqqZuol5O4kOpSFULY5kRsFSB7Iph4Hnzu6laZSi0zsew7kV1qqjA72xQT8xkyBmpjbmRyUloBQw
+2026-06-01 01:57:42,468 | ERROR | News search error for AKDHL: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAKD%252BHospitality%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGMbB8tAGIjCdPNrqqZuol5O4kOpSFULY5kRsFSB7Iph4Hnzu6laZSi0zsew7kV1qqjA72xQT8xkyBmpjbmRyUloBQw

@@ -11,13 +11,26 @@ Expected input columns are:
 - total_debt
 - total_assets
 - interest_income
+    financial_known_count = (
+        debt_ratio.notna().astype(int)
+        + interest_ratio.notna().astype(int)
+        + securities_ratio.notna().astype(int)
+        + receivables_ratio.notna().astype(int)
+    )
 - total_revenue
 - accounts_receivable
 - non_compliant_investments
-
-The main entry point, :func:`screen_aaoifi`, returns the original rows enriched
-with per-screen PASS/FAIL results, ratios, an overall status, a purification
-ratio, and a simple 0-100 Shariah score.
+        "HARAM",
+        np.where(
+            financial_known_count == 0,
+            "DOUBTFUL",
+            np.where(
+                financial_fail_count == 0,
+                "HALAL",
+                np.where(financial_fail_count <= 2, "DOUBTFUL", "HARAM"),
+            ),
+        ),
+    )
 """
 
 from __future__ import annotations
@@ -66,6 +79,13 @@ def screen_aaoifi(data: pd.DataFrame) -> pd.DataFrame:
     Notes
     -----
     The overall status is computed as follows:
+    
+        financial_known_count = (
+            debt_ratio.notna().astype(int)
+            + interest_ratio.notna().astype(int)
+            + securities_ratio.notna().astype(int)
+            + receivables_ratio.notna().astype(int)
+        )
 
     - ``HALAL`` when all five screens pass.
     - ``DOUBTFUL`` when the business screen passes and one or two financial
@@ -110,13 +130,24 @@ def screen_aaoifi(data: pd.DataFrame) -> pd.DataFrame:
         + (receivables_screen == "FAIL").astype(int)
     )
 
+    financial_known_count = (
+        debt_ratio.notna().astype(int)
+        + interest_ratio.notna().astype(int)
+        + securities_ratio.notna().astype(int)
+        + receivables_ratio.notna().astype(int)
+    )
+
     overall_status = np.where(
         business_screen == "FAIL",
         "HARAM",
         np.where(
-            financial_fail_count == 0,
-            "HALAL",
-            np.where(financial_fail_count <= 2, "DOUBTFUL", "HARAM"),
+            financial_known_count == 0,
+            "DOUBTFUL",
+            np.where(
+                financial_fail_count == 0,
+                "HALAL",
+                np.where(financial_fail_count <= 2, "DOUBTFUL", "HARAM"),
+            ),
         ),
     )
 
@@ -169,7 +200,7 @@ def _ratio_result(value: float | np.floating | np.integer | None, threshold: flo
     """Convert a ratio into PASS/FAIL using the provided threshold."""
 
     if value is None or pd.isna(value):
-        return "FAIL"
+        return "UNKNOWN"
 
     return "PASS" if float(value) < threshold else "FAIL"
 
