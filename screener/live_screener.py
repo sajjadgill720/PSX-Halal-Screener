@@ -13,7 +13,11 @@ from data.error_utils import log_exception, log_message
 from data.news_monitor import flag_news_concerns
 from data.psx_scraper import get_all_psx_tickers, get_financials_batch, get_financials_yfinance
 from data.sector_classifier import classify_all_companies
+from data.verdict_store import get_financials as get_cached_financials
+from data.verdict_store import get_zakat_data as get_cached_zakat_data
+from data.verdict_store import get_verdict, needs_refresh, save_financials, save_verdict, save_zakat_data
 from screener.aaoifi import screen_aaoifi
+from screener.reason_generator import generate_full_reason
 
 
 SCREENED_CACHE_PATH = Path(__file__).resolve().parents[1] / "data" / "screened_results.csv"
@@ -64,6 +68,7 @@ def run_full_screening(use_cache: bool = True, log_callback=None) -> pd.DataFram
         screened["sector_classified"] = screened.get("sector_classified", screened.get("sector", "Unknown"))
         screened["is_haram_business"] = screened.get("is_haram_business", False)
 
+        _persist_screened_rows(screened)
         _save_screened_cache(screened)
         if log_callback:
             log_callback(f"Step 5 complete: results ready ({len(screened)} rows)")
@@ -82,6 +87,22 @@ def screen_single_company(ticker: str, log_callback=None) -> dict:
         return {}
 
     try:
+        if not needs_refresh(normalized_ticker):
+            cached = get_verdict(normalized_ticker)
+            if cached:
+                cached["screening_explanation"] = generate_screening_explanation(pd.Series(cached))
+                cached_financials = get_cached_financials(normalized_ticker) or {}
+                cached_zakat = get_cached_zakat_data(normalized_ticker) or {}
+                for key, value in cached_financials.items():
+                    if key != "ticker":
+                        cached[f"financial_{key}"] = value
+                for key, value in cached_zakat.items():
+                    if key != "ticker":
+                        cached[f"zakat_{key}"] = value
+                if log_callback:
+                    log_callback(f"{normalized_ticker}: loaded cached verdict from SQLite")
+                return cached
+
         universe = get_all_psx_tickers(log_callback=log_callback)
         row = universe[universe["ticker"] == normalized_ticker]
         if not row.empty:
@@ -117,6 +138,7 @@ def screen_single_company(ticker: str, log_callback=None) -> dict:
             log_callback(f"{normalized_ticker}: AAOIFI screening complete")
         screened["purification_ratio_percent"] = pd.to_numeric(screened["purification_ratio"], errors="coerce") * 100
         screened["screening_explanation"] = screened.apply(generate_screening_explanation, axis=1)
+        _persist_screened_rows(screened)
 
         concern_data = _call_with_timeout(
             flag_news_concerns,
@@ -140,45 +162,8 @@ def screen_single_company(ticker: str, log_callback=None) -> dict:
 
 def generate_screening_explanation(row: pd.Series) -> str:
     """Create a plain-English explanation for a screened company."""
-
-    ticker = str(row.get("ticker", "")).upper()
-    sector = str(row.get("sector_classified") or row.get("sector") or "Unknown")
-    status = str(row.get("overall_status", "UNKNOWN")).upper()
-    score = row.get("shariah_score", np.nan)
-    debt_ratio = _format_percent(row.get("debt_ratio"))
-    interest_ratio = _format_percent(row.get("interest_ratio"))
-    purification_ratio = _format_percent(row.get("purification_ratio"))
-
-    business_text = str(row.get("business_screen", "PASS")).upper()
-    debt_text = str(row.get("debt_screen", "PASS")).upper()
-    interest_text = str(row.get("interest_screen", "PASS")).upper()
-    securities_text = str(row.get("securities_screen", "PASS")).upper()
-    receivables_text = str(row.get("receivables_screen", "PASS")).upper()
-
-    passed = sum(value == "PASS" for value in [business_text, debt_text, interest_text, securities_text, receivables_text])
-    sector_note = _friendly_sector(sector)
-
-    if status == "HALAL":
-        lead = f"{ticker} passed all 5 Shariah screens."
-    elif status == "DOUBTFUL":
-        lead = f"{ticker} passed the business screen but failed {5 - passed} financial screen(s), so it is classified as doubtful."
-    else:
-        lead = f"{ticker} failed the Shariah screening because the business or financial profile is not compliant."
-
-    details = [
-        lead,
-        f"Its core business appears to be {sector_note}." if sector_note else "Its core business was not clearly classified.",
-        f"Debt ratio is {debt_ratio}, interest income ratio is {interest_ratio}, and purification ratio is {purification_ratio}.",
-        f"Shariah Score: {int(score) if pd.notna(score) else 0}/100.",
-    ]
-
-    if str(row.get("haram_reason", "")).strip():
-        details.append(f"Reason: {row.get('haram_reason')}")
-
-    if status == "HALAL" and pd.notna(row.get("purification_ratio")):
-        details.append(f"Purification is estimated at {purification_ratio}.")
-
-    return " ".join(details)
+    row_data = row.to_dict()
+    return generate_full_reason(str(row_data.get("ticker", "")), row_data, row_data)
 
 
 def _load_screened_cache() -> pd.DataFrame:
@@ -203,6 +188,57 @@ def _save_screened_cache(frame: pd.DataFrame) -> None:
     except Exception as exc:
         log_exception("Failed to save screened cache")
         log_message(f"Screened cache save error: {exc}")
+
+
+def _persist_screened_rows(frame: pd.DataFrame) -> None:
+    if frame.empty:
+        return
+
+    for _, row in frame.iterrows():
+        row_data = row.to_dict()
+        ticker = str(row_data.get("ticker", "")).strip().upper()
+        if not ticker:
+            continue
+
+        try:
+            save_verdict(ticker, row_data)
+        except Exception as exc:
+            log_message(f"SQLite verdict save skipped for {ticker}: {exc}")
+
+        try:
+            save_financials(
+                ticker,
+                {
+                    "total_assets": row_data.get("total_assets"),
+                    "total_debt": row_data.get("total_debt"),
+                    "interest_income": row_data.get("interest_income"),
+                    "total_revenue": row_data.get("total_revenue"),
+                    "accounts_receivable": row_data.get("accounts_receivable"),
+                    "non_compliant_investments": row_data.get("non_compliant_investments"),
+                    "cash": row_data.get("cash"),
+                    "market_cap": row_data.get("market_cap"),
+                    "current_price": row_data.get("current_price"),
+                    "shares_outstanding": row_data.get("shares_outstanding"),
+                    "fiscal_year": row_data.get("fiscal_year"),
+                    "fetched_at": row_data.get("screened_at"),
+                },
+            )
+        except Exception as exc:
+            log_message(f"SQLite financial save skipped for {ticker}: {exc}")
+
+        try:
+            save_zakat_data(
+                ticker,
+                {
+                    "cash_per_share": row_data.get("cash_per_share"),
+                    "receivables_per_share": row_data.get("receivables_per_share"),
+                    "inventory_per_share": row_data.get("inventory_per_share"),
+                    "zakatable_per_share": row_data.get("zakatable_per_share"),
+                    "calculated_at": row_data.get("screened_at"),
+                },
+            )
+        except Exception as exc:
+            log_message(f"SQLite zakat save skipped for {ticker}: {exc}")
 
 
 def _fallback_cached_screened() -> pd.DataFrame:

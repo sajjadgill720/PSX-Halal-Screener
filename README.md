@@ -8,7 +8,11 @@ PSX Halal Screener is a Streamlit application for screening Pakistan Stock Excha
 git clone <your-repository-url>
 cd "PSX Halal Screener"
 pip install -r requirements.txt
-streamlit run dashboard/app.py
+# Recommended: use the provided virtual environment helpers to run Streamlit
+".venv\Scripts\Activate.ps1"  # (Windows PowerShell)
+python -m streamlit run dashboard/app.py
+
+Or double-click run_streamlit.bat in the repo root (Windows) which runs Streamlit using the project venv.
 ```
 
 ## AAOIFI Screening Ratios

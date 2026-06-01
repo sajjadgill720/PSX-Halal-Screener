@@ -1338,3 +1338,830 @@ Traceback (most recent call last):
     raise HTTPError(http_error_msg, response=self)
 requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAKD%252BHospitality%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGMbB8tAGIjCdPNrqqZuol5O4kOpSFULY5kRsFSB7Iph4Hnzu6laZSi0zsew7kV1qqjA72xQT8xkyBmpjbmRyUloBQw
 2026-06-01 01:57:42,468 | ERROR | News search error for AKDHL: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAKD%252BHospitality%252BLimited%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGMbB8tAGIjCdPNrqqZuol5O4kOpSFULY5kRsFSB7Iph4Hnzu6laZSi0zsew7kV1qqjA72xQT8xkyBmpjbmRyUloBQw
+2026-06-01 02:25:26,408 | ERROR | Search lookup failed for TST
+Traceback (most recent call last):
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DTST%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGMbO8tAGIjA6QVFqReqPIsxL90JufQMUVLUulEbgGzB07S3voifHGztpPAM6JSs2A5BBqftBwjkyBmpjbmRyUloBQw
+2026-06-01 02:25:26,411 | ERROR | Search error for TST: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DTST%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGMbO8tAGIjA6QVFqReqPIsxL90JufQMUVLUulEbgGzB07S3voifHGztpPAM6JSs2A5BBqftBwjkyBmpjbmRyUloBQw
+2026-06-01 02:25:27,506 | ERROR | Search lookup failed for TST
+Traceback (most recent call last):
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DTST%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGMfO8tAGIjBXL1t6--FSTEMv8b-G7_f0jmOJK6GeHSoKo3JcLn46lBD-b-b_70Qkpy03LdQTsGQyBmpjbmRyUloBQw
+2026-06-01 02:25:27,508 | ERROR | Search error for TST: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DTST%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGMfO8tAGIjBXL1t6--FSTEMv8b-G7_f0jmOJK6GeHSoKo3JcLn46lBD-b-b_70Qkpy03LdQTsGQyBmpjbmRyUloBQw
+2026-06-01 02:25:28,084 | ERROR | Search lookup failed for TST
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DTST%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGMjO8tAGIjBJECnNlMpfaKAhVDPwIDSk7FEveaK6JefOBhUoz2mi3t4feQvch4-F13c6nLwBN98yBmpjbmRyUloBQw
+2026-06-01 02:25:28,087 | ERROR | Search error for TST: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DTST%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGMjO8tAGIjBJECnNlMpfaKAhVDPwIDSk7FEveaK6JefOBhUoz2mi3t4feQvch4-F13c6nLwBN98yBmpjbmRyUloBQw
+2026-06-01 02:25:28,170 | ERROR | News search failed for TST
+Traceback (most recent call last):
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DTST%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGMjO8tAGIjB7Mh6gqKJU7PlOB-YvIJ7sdET5Atg6aEHVw326ROCO9HocvvCijzD5lBCqAg_s0DkyBmpjbmRyUloBQw
+2026-06-01 02:25:28,172 | ERROR | News search error for TST: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DTST%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGMjO8tAGIjB7Mh6gqKJU7PlOB-YvIJ7sdET5Atg6aEHVw326ROCO9HocvvCijzD5lBCqAg_s0DkyBmpjbmRyUloBQw
+2026-06-01 02:25:29,692 | ERROR | News search failed for TST
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DTST%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGMrO8tAGIjCPXlElEZ_Rsd31lOUfQ_F7W57FKpBCIpzcaXhUZtm1nztOsm-OcF8PBJJS5lZI71kyBmpjbmRyUloBQw
+2026-06-01 02:25:29,695 | ERROR | News search error for TST: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DTST%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGMrO8tAGIjCPXlElEZ_Rsd31lOUfQ_F7W57FKpBCIpzcaXhUZtm1nztOsm-OcF8PBJJS5lZI71kyBmpjbmRyUloBQw
+2026-06-01 02:25:29,953 | ERROR | News search failed for TST
+Traceback (most recent call last):
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DTST%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGMnO8tAGIjC7q4hL9JdPK5J8_JGm5QfWJOEDRPdX2RChIkCb1GWLyDM7KSU1sHHAk8qPf1dvkG8yBmpjbmRyUloBQw
+2026-06-01 02:25:29,954 | ERROR | News search error for TST: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DTST%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGMnO8tAGIjC7q4hL9JdPK5J8_JGm5QfWJOEDRPdX2RChIkCb1GWLyDM7KSU1sHHAk8qPf1dvkG8yBmpjbmRyUloBQw
+2026-06-01 02:50:38,144 | ERROR | yfinance research lookup failed for LUCKY CEMENT.KA
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 529, in _fetch_yfinance_research_context
+    info = _safe_dict(_safe_getattr(company, "info"))
+           ^^^^^^^^^^
+NameError: name '_safe_dict' is not defined
+2026-06-01 02:50:38,147 | ERROR | yfinance research error for LUCKY CEMENT.KA: name '_safe_dict' is not defined
+2026-06-01 02:50:40,234 | ERROR | research search lookup failed for LUCKY CEMENT
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 546, in _search_research_snippets
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DPSX%252BLUCKY%252BCEMENT%252BPakistan%252Bcompany%252Bbusiness%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGLDa8tAGIjCNs_YrbtIuleP3N45rkQFzr584zL2wmPKXjyztaz4HpxK0i6YIDlOEh6xzRGSB9A4yBmpjbmRyUloBQw
+2026-06-01 02:50:40,236 | ERROR | research search error for LUCKY CEMENT: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DPSX%252BLUCKY%252BCEMENT%252BPakistan%252Bcompany%252Bbusiness%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGLDa8tAGIjCNs_YrbtIuleP3N45rkQFzr584zL2wmPKXjyztaz4HpxK0i6YIDlOEh6xzRGSB9A4yBmpjbmRyUloBQw
+2026-06-01 03:03:11,909 | ERROR | News search failed for LUCKY CEMENT
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DLUCKY%252BCEMENT%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGKDg8tAGIjAdJwBnQNSGokLZW0xvBiM8_d87hc4CgkRqZEMfTVFtiAwNtq6fEnumXIBXLGIyX_AyBmpjbmRyUloBQw
+2026-06-01 03:03:11,913 | ERROR | News search error for LUCKY CEMENT: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DLUCKY%252BCEMENT%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGKDg8tAGIjAdJwBnQNSGokLZW0xvBiM8_d87hc4CgkRqZEMfTVFtiAwNtq6fEnumXIBXLGIyX_AyBmpjbmRyUloBQw
+2026-06-01 03:03:21,052 | ERROR | yfinance research lookup failed for ENGR.KA
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 529, in _fetch_yfinance_research_context
+    info = _safe_dict(_safe_getattr(company, "info"))
+           ^^^^^^^^^^
+NameError: name '_safe_dict' is not defined
+2026-06-01 03:03:21,118 | ERROR | yfinance research error for ENGR.KA: name '_safe_dict' is not defined
+2026-06-01 03:03:22,960 | ERROR | research search lookup failed for ENGR
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 546, in _search_research_snippets
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DPSX%252BENGR%252BPakistan%252Bcompany%252Bbusiness%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGKvg8tAGIjDaVQ2ZjQMXCOgAFzqRoxeJbfpozAU_QBD7wkvwVdXeoQjlmWilrAyu5LwJ3z6_LN4yBmpjbmRyUloBQw
+2026-06-01 03:03:22,964 | ERROR | research search error for ENGR: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DPSX%252BENGR%252BPakistan%252Bcompany%252Bbusiness%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGKvg8tAGIjDaVQ2ZjQMXCOgAFzqRoxeJbfpozAU_QBD7wkvwVdXeoQjlmWilrAyu5LwJ3z6_LN4yBmpjbmRyUloBQw
+2026-06-01 03:03:25,097 | ERROR | yfinance research lookup failed for ENGR.KA
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 529, in _fetch_yfinance_research_context
+    info = _safe_dict(_safe_getattr(company, "info"))
+           ^^^^^^^^^^
+NameError: name '_safe_dict' is not defined
+2026-06-01 03:03:25,098 | ERROR | yfinance research error for ENGR.KA: name '_safe_dict' is not defined
+2026-06-01 03:03:28,804 | ERROR | research search lookup failed for ENGR
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 546, in _search_research_snippets
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DPSX%252BENGR%252BPakistan%252Bcompany%252Bbusiness%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGLHg8tAGIjBvNDySmJYU9zMv9o2zqgKc1riuC296LvzpUqS3h9w6LpOW0Vn-MjkUuZm5SiC_bbcyBmpjbmRyUloBQw
+2026-06-01 03:03:28,807 | ERROR | research search error for ENGR: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DPSX%252BENGR%252BPakistan%252Bcompany%252Bbusiness%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGLHg8tAGIjBvNDySmJYU9zMv9o2zqgKc1riuC296LvzpUqS3h9w6LpOW0Vn-MjkUuZm5SiC_bbcyBmpjbmRyUloBQw
+2026-06-01 03:03:31,849 | ERROR | Search lookup failed for ENGR
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DENGR%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGLTg8tAGIjDKzsrGDBbtcMEZlpMhzm_l7Tkk0B_KPSsJidulW5FPEPWCTGM6SCJUIWAmpAbbPxcyBmpjbmRyUloBQw
+2026-06-01 03:03:31,853 | ERROR | Search error for ENGR: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DENGR%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGLTg8tAGIjDKzsrGDBbtcMEZlpMhzm_l7Tkk0B_KPSsJidulW5FPEPWCTGM6SCJUIWAmpAbbPxcyBmpjbmRyUloBQw
+2026-06-01 03:03:34,040 | ERROR | News search failed for ENGR
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DENGR%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGLbg8tAGIjATqZVoBiIE2xNX1nQCWoKzxgsQ8C67nuAq5R-S9r6k4wXH5Hfsz5Q1pKpCDjUEfw8yBmpjbmRyUloBQw
+2026-06-01 03:03:34,042 | ERROR | News search error for ENGR: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DENGR%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGLbg8tAGIjATqZVoBiIE2xNX1nQCWoKzxgsQ8C67nuAq5R-S9r6k4wXH5Hfsz5Q1pKpCDjUEfw8yBmpjbmRyUloBQw
+2026-06-01 03:03:34,462 | ERROR | Search lookup failed for ENGR
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DENGR%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGLbg8tAGIjD1MoVH1_KdwF7_d60yerUvB-OtzH4ETBjhH8ckw7nxADYwRKpAFhY75_fJq9RER5cyBmpjbmRyUloBQw
+2026-06-01 03:03:34,465 | ERROR | Search error for ENGR: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DENGR%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGLbg8tAGIjD1MoVH1_KdwF7_d60yerUvB-OtzH4ETBjhH8ckw7nxADYwRKpAFhY75_fJq9RER5cyBmpjbmRyUloBQw
+2026-06-01 03:03:36,011 | ERROR | News search failed for ENGR
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DENGR%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGLjg8tAGIjDo-AtyOCuebu-9LS5PqwJtHywlNyfYBaQpj2aqEy806HFxgjYdO3PY4lbcmJwFRCIyBmpjbmRyUloBQw
+2026-06-01 03:03:36,012 | ERROR | News search error for ENGR: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DENGR%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGLjg8tAGIjDo-AtyOCuebu-9LS5PqwJtHywlNyfYBaQpj2aqEy806HFxgjYdO3PY4lbcmJwFRCIyBmpjbmRyUloBQw
+2026-06-01 03:05:22,839 | ERROR | yfinance research lookup failed for ENGR.KA
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 529, in _fetch_yfinance_research_context
+    info = _safe_dict(_safe_getattr(company, "info"))
+           ^^^^^^^^^^
+NameError: name '_safe_dict' is not defined
+2026-06-01 03:05:22,899 | ERROR | yfinance research error for ENGR.KA: name '_safe_dict' is not defined
+2026-06-01 03:05:27,652 | ERROR | research search lookup failed for ENGR
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 546, in _search_research_snippets
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DPSX%252BENGR%252BPakistan%252Bcompany%252Bbusiness%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGKfh8tAGIjBxvEKJ4vAwBd5hyKYtftQip9gF-LJI7PQssmw29JZoHEjzDQpepB7OK9Ob6YBJpXcyBmpjbmRyUloBQw
+2026-06-01 03:05:27,653 | ERROR | research search error for ENGR: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DPSX%252BENGR%252BPakistan%252Bcompany%252Bbusiness%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGKfh8tAGIjBxvEKJ4vAwBd5hyKYtftQip9gF-LJI7PQssmw29JZoHEjzDQpepB7OK9Ob6YBJpXcyBmpjbmRyUloBQw
+2026-06-01 03:05:41,724 | ERROR | Search lookup failed for ENGR
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DENGR%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGLbh8tAGIjDikLBmI3wdWRsWK4trGbb7gc3lSrFsS72Qm7WEJaQt-p65NJoOFNAvAPkzk-11EpUyBmpjbmRyUloBQw
+2026-06-01 03:05:41,725 | ERROR | Search error for ENGR: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DENGR%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGLbh8tAGIjDikLBmI3wdWRsWK4trGbb7gc3lSrFsS72Qm7WEJaQt-p65NJoOFNAvAPkzk-11EpUyBmpjbmRyUloBQw
+2026-06-01 03:05:43,407 | ERROR | News search failed for ENGR
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\news_monitor.py", line 23, in get_company_news
+    search_results = list(google_search(query, num_results=5, lang="en", advanced=True))
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DENGR%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGLjh8tAGIjCDmEewqQRzoELMJKZB-scKCnEP8cR_QXbBlhHUQCfiwIyC5scpB3i7FAiKvO9MCJgyBmpjbmRyUloBQw
+2026-06-01 03:05:43,408 | ERROR | News search error for ENGR: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DENGR%252BPakistan%252Bharam%252Bhalal%252Binterest%252Briba%252Balcohol%252Btobacco%26num%3D7%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGLjh8tAGIjCDmEewqQRzoELMJKZB-scKCnEP8cR_QXbBlhHUQCfiwIyC5scpB3i7FAiKvO9MCJgyBmpjbmRyUloBQw
+2026-06-01 14:11:37,856 | ERROR | Search lookup failed for AKDCL
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAKD%252BCapital%252BLimited%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGMqZ9dAGIjBkMXd0eMmWwDJNAGVY95e6DvroHix9b4FpQP7k5bDtEGhdoUKDnOougLiNHBiHB2cyBmpjbmRyUloBQw
+2026-06-01 14:11:37,859 | ERROR | Search error for AKDCL: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAKD%252BCapital%252BLimited%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGMqZ9dAGIjBkMXd0eMmWwDJNAGVY95e6DvroHix9b4FpQP7k5bDtEGhdoUKDnOougLiNHBiHB2cyBmpjbmRyUloBQw
+2026-06-01 14:11:39,892 | ERROR | Search lookup failed for AKZO
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAkzo%252BNobel%252BPakistan%252BLimited%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGMuZ9dAGIjApaD01koQ-MuC6bhBLPR0lrCiSxBrcCmX1StS8i80o3TOpJTqRskwz6X_HZHl8qo8yBmpjbmRyUloBQw
+2026-06-01 14:11:39,895 | ERROR | Search error for AKZO: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAkzo%252BNobel%252BPakistan%252BLimited%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGMuZ9dAGIjApaD01koQ-MuC6bhBLPR0lrCiSxBrcCmX1StS8i80o3TOpJTqRskwz6X_HZHl8qo8yBmpjbmRyUloBQw
+2026-06-01 14:11:41,355 | ERROR | Search lookup failed for ARM
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAllied%252BRental%252BModaraba%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGM6Z9dAGIjAftIJcrGkA63NGK27wKOz0gRtuIVkihxy7f8y0x-kwNeRzPTEqKIjs8c7AjlVo2OkyBmpjbmRyUloBQw
+2026-06-01 14:11:41,357 | ERROR | Search error for ARM: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAllied%252BRental%252BModaraba%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGM6Z9dAGIjAftIJcrGkA63NGK27wKOz0gRtuIVkihxy7f8y0x-kwNeRzPTEqKIjs8c7AjlVo2OkyBmpjbmRyUloBQw
+2026-06-01 14:11:42,811 | ERROR | Search lookup failed for ASCR1
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAL-Shaheer%252B%2528R%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGM-Z9dAGIjDXpP90sFC7j6-uijHUUdCz_gmrDaTT-i4ax3fgcOWz896_5ZYgUXUldmFv6y_hZVMyBmpjbmRyUloBQw
+2026-06-01 14:11:42,811 | ERROR | Search error for ASCR1: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAL-Shaheer%252B%2528R%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGM-Z9dAGIjDXpP90sFC7j6-uijHUUdCz_gmrDaTT-i4ax3fgcOWz896_5ZYgUXUldmFv6y_hZVMyBmpjbmRyUloBQw
+2026-06-01 14:11:44,076 | ERROR | Search lookup failed for AWWAL
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAwwal%252BModaraba%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGNCZ9dAGIjAPhQ2Ja4IXtbHaZnRzhWeNiWYO-mTQWQG59IUYpiL8J-Nk2963_eBqct4UXDEXwWUyBmpjbmRyUloBQw
+2026-06-01 14:11:44,080 | ERROR | Search error for AWWAL: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DAwwal%252BModaraba%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGNCZ9dAGIjAPhQ2Ja4IXtbHaZnRzhWeNiWYO-mTQWQG59IUYpiL8J-Nk2963_eBqct4UXDEXwWUyBmpjbmRyUloBQw
+2026-06-01 14:11:45,785 | ERROR | Search lookup failed for BPBL
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DBalochistan%252BParticle%252BBoard%252BLimited%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGNKZ9dAGIjA_6TSHbnKJ751sMwAyVUrH6HvZpfLOuyBbQXhHlof7_lSlh_HSJhohJ82hI-u2Db4yBmpjbmRyUloBQw
+2026-06-01 14:11:45,786 | ERROR | Search error for BPBL: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DBalochistan%252BParticle%252BBoard%252BLimited%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGNKZ9dAGIjA_6TSHbnKJ751sMwAyVUrH6HvZpfLOuyBbQXhHlof7_lSlh_HSJhohJ82hI-u2Db4yBmpjbmRyUloBQw
+2026-06-01 14:11:47,209 | ERROR | Search lookup failed for BRR
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DB.R.R.%252BGuardian%252BModaraba%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGNOZ9dAGIjD7ntvifZZ1na6uZGudF8vZnXqvg69zEtHpvDIs3CzNT_fbP0C444yk18EBqK7UFHYyBmpjbmRyUloBQw
+2026-06-01 14:11:47,211 | ERROR | Search error for BRR: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DB.R.R.%252BGuardian%252BModaraba%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGNOZ9dAGIjD7ntvifZZ1na6uZGudF8vZnXqvg69zEtHpvDIs3CzNT_fbP0C444yk18EBqK7UFHYyBmpjbmRyUloBQw
+2026-06-01 14:11:48,556 | ERROR | Search lookup failed for EFOODS
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DEngro%252BFoods%252BLimited%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGNWZ9dAGIjAl1_xUtDTSZuo63NsYfY_pWCRWZL-jvK6o733dJ7MWnj8aVBvt0EN5-RoxX6obpM4yBmpjbmRyUloBQw
+2026-06-01 14:11:48,557 | ERROR | Search error for EFOODS: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DEngro%252BFoods%252BLimited%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGNWZ9dAGIjAl1_xUtDTSZuo63NsYfY_pWCRWZL-jvK6o733dJ7MWnj8aVBvt0EN5-RoxX6obpM4yBmpjbmRyUloBQw
+2026-06-01 14:11:50,145 | ERROR | Search lookup failed for EWICR1
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DEast%252BWest%252B%2528R%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGNaZ9dAGIjDmYrvcfxUINgTr8tH0goziNrrQi1CtlC_V0-TEMbME-CFcfUUr8bnck2n4WPxMoH0yBmpjbmRyUloBQw
+2026-06-01 14:11:50,148 | ERROR | Search error for EWICR1: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DEast%252BWest%252B%2528R%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGNaZ9dAGIjDmYrvcfxUINgTr8tH0goziNrrQi1CtlC_V0-TEMbME-CFcfUUr8bnck2n4WPxMoH0yBmpjbmRyUloBQw
+2026-06-01 14:11:51,516 | ERROR | Search lookup failed for EXTR
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DExtraction%252B%2528Pakistan%2529%252BLimited%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGNiZ9dAGIjD_6mwwjA-m5Kbtci1kT09bkdeYz-cMmQY2zBZEL_Vjcydn48e0He7AGAbGdnw1FyAyBmpjbmRyUloBQw
+2026-06-01 14:11:51,518 | ERROR | Search error for EXTR: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DExtraction%252B%2528Pakistan%2529%252BLimited%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGNiZ9dAGIjD_6mwwjA-m5Kbtci1kT09bkdeYz-cMmQY2zBZEL_Vjcydn48e0He7AGAbGdnw1FyAyBmpjbmRyUloBQw
+2026-06-01 14:11:53,134 | ERROR | Search lookup failed for FFLR1
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DFauji%252BFoods%252BLtd%2528R%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGNmZ9dAGIjAmOGQHXW2g0E-hkJEtFHt8px8299UqgiGHfFmmB4wjxQ-SyJ2v8SmMWfcC8rBGxNwyBmpjbmRyUloBQw
+2026-06-01 14:11:53,137 | ERROR | Search error for FFLR1: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DFauji%252BFoods%252BLtd%2528R%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGNmZ9dAGIjAmOGQHXW2g0E-hkJEtFHt8px8299UqgiGHfFmmB4wjxQ-SyJ2v8SmMWfcC8rBGxNwyBmpjbmRyUloBQw
+2026-06-01 14:11:54,638 | ERROR | Search lookup failed for FUDLM
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DFirst%252BUDL%252BModaraba%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGNuZ9dAGIjCb0mVabJjiiSv8UzVwmHXw7BXzDOkfkQhgoyJZ0IMaOSb9VuJOYBGSa0v1KZ16LQoyBmpjbmRyUloBQw
+2026-06-01 14:11:54,640 | ERROR | Search error for FUDLM: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DFirst%252BUDL%252BModaraba%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGNuZ9dAGIjCb0mVabJjiiSv8UzVwmHXw7BXzDOkfkQhgoyJZ0IMaOSb9VuJOYBGSa0v1KZ16LQoyBmpjbmRyUloBQw
+2026-06-01 14:11:56,089 | ERROR | Search lookup failed for GAILR1
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3D%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGNyZ9dAGIjDpYUmyL1_gs_wNjR7p_fdOIT0BE9dl-UBrUNfIuAT1aVvkkfD9MWPEA-0kqlyg76syBmpjbmRyUloBQw
+2026-06-01 14:11:56,090 | ERROR | Search error for GAILR1: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3D%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGNyZ9dAGIjDpYUmyL1_gs_wNjR7p_fdOIT0BE9dl-UBrUNfIuAT1aVvkkfD9MWPEA-0kqlyg76syBmpjbmRyUloBQw
+2026-06-01 14:11:57,340 | ERROR | Search lookup failed for GEMUNSL
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DUniversal%252BNetwork%252BSystems%252BLimited%2528GEM%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGN6Z9dAGIjB8HlNGuAvzSpx8oECb18b-3PXdW4_OpFe2Q5sO7B-dlcLW3lZHpR0MSrY9Z4-A2lYyBmpjbmRyUloBQw
+2026-06-01 14:11:57,343 | ERROR | Search error for GEMUNSL: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DUniversal%252BNetwork%252BSystems%252BLimited%2528GEM%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGN6Z9dAGIjB8HlNGuAvzSpx8oECb18b-3PXdW4_OpFe2Q5sO7B-dlcLW3lZHpR0MSrY9Z4-A2lYyBmpjbmRyUloBQw
+2026-06-01 14:11:58,892 | ERROR | Search lookup failed for GGGLR1
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DGhani%252BGlobal%2528R%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGN-Z9dAGIjATBC8rULG9lyueNH152hoewhuV7ZwXZMkWpJJud97WuZzIWJ6x23cOfGlvqjBqfPkyBmpjbmRyUloBQw
+2026-06-01 14:11:58,893 | ERROR | Search error for GGGLR1: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DGhani%252BGlobal%2528R%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGN-Z9dAGIjATBC8rULG9lyueNH152hoewhuV7ZwXZMkWpJJud97WuZzIWJ6x23cOfGlvqjBqfPkyBmpjbmRyUloBQw
+2026-06-01 14:12:00,148 | ERROR | Search lookup failed for GGLR1
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DGhani%252BGlobal%2528R%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGOCZ9dAGIjCujem6FfwvY84DA6VuILAgMTD8hph6s3dm0yZZSfe57o1X0tuqozZHY3gwrUIimnAyBmpjbmRyUloBQw
+2026-06-01 14:12:00,150 | ERROR | Search error for GGLR1: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DGhani%252BGlobal%2528R%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGOCZ9dAGIjCujem6FfwvY84DA6VuILAgMTD8hph6s3dm0yZZSfe57o1X0tuqozZHY3gwrUIimnAyBmpjbmRyUloBQw
+2026-06-01 14:12:01,498 | ERROR | Search lookup failed for GTECH
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DG3%252BTechnologies%252BLimited%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGOKZ9dAGIjBI49ABp5VAQXl4rI4I8k6JyqVfiuuX6-4_ErIyKFSHrEA-dMRwb-GrVub1-zvBKqUyBmpjbmRyUloBQw
+2026-06-01 14:12:01,499 | ERROR | Search error for GTECH: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DG3%252BTechnologies%252BLimited%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGOKZ9dAGIjBI49ABp5VAQXl4rI4I8k6JyqVfiuuX6-4_ErIyKFSHrEA-dMRwb-GrVub1-zvBKqUyBmpjbmRyUloBQw
+2026-06-01 14:12:02,859 | ERROR | Search lookup failed for GTECHBR
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DG3%252BTechnologies%252BLtd.CLASS%252BB%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGOOZ9dAGIjBmJmcclTTvYbUjdgbXMejoaAdGMkST7Tsur0Qla56FoqMhw4k-X4TSFGUGrOG51R8yBmpjbmRyUloBQw
+2026-06-01 14:12:02,861 | ERROR | Search error for GTECHBR: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DG3%252BTechnologies%252BLtd.CLASS%252BB%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGOOZ9dAGIjBmJmcclTTvYbUjdgbXMejoaAdGMkST7Tsur0Qla56FoqMhw4k-X4TSFGUGrOG51R8yBmpjbmRyUloBQw
+2026-06-01 14:12:04,149 | ERROR | Search lookup failed for HMM
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DHabib%252BMetro%252BMod%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGOSZ9dAGIjDvPCbiqAqk4iRsM8MycfQdOzZu0DZ97zzxMA9cqZ6Q0RQIDGeCtVWViQuRMO-Gc2AyBmpjbmRyUloBQw
+2026-06-01 14:12:04,154 | ERROR | Search error for HMM: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DHabib%252BMetro%252BMod%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGOSZ9dAGIjDvPCbiqAqk4iRsM8MycfQdOzZu0DZ97zzxMA9cqZ6Q0RQIDGeCtVWViQuRMO-Gc2AyBmpjbmRyUloBQw
+2026-06-01 14:12:05,624 | ERROR | Search lookup failed for HSMPSR
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DHusein%252BSugar%2528R%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGOaZ9dAGIjBgZPIyLzzS7WhWiOkOKzCYFCMQ3zG_EvodfmwlguniaYupmP1ZKx95QLLECTZXoosyBmpjbmRyUloBQw
+2026-06-01 14:12:05,627 | ERROR | Search error for HSMPSR: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DHusein%252BSugar%2528R%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGOaZ9dAGIjBgZPIyLzzS7WhWiOkOKzCYFCMQ3zG_EvodfmwlguniaYupmP1ZKx95QLLECTZXoosyBmpjbmRyUloBQw
+2026-06-01 14:12:06,987 | ERROR | Search lookup failed for IMAGER1
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DImage%252BPak%252BLtd%2528R%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGOeZ9dAGIjDFof2vbw78I1H1h76U5OdHgc0YPPcfi6pfaioz8Ud3yRdbSmNx6Rv9CNSgUWqKNTgyBmpjbmRyUloBQw
+2026-06-01 14:12:06,989 | ERROR | Search error for IMAGER1: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DImage%252BPak%252BLtd%2528R%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGOeZ9dAGIjDFof2vbw78I1H1h76U5OdHgc0YPPcfi6pfaioz8Ud3yRdbSmNx6Rv9CNSgUWqKNTgyBmpjbmRyUloBQw
+2026-06-01 14:12:08,557 | ERROR | Search lookup failed for JOVC
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DJaved%252BOmer%252BVohra%252B%2526%252BCompany%252BLimited%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGOmZ9dAGIjA-7rHxNRTWgJm_9qPj7p42v9EY2qLt1lr0h3maRWmdZgTytqGFfa0OEHadVkZuzl4yBmpjbmRyUloBQw
+2026-06-01 14:12:08,558 | ERROR | Search error for JOVC: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DJaved%252BOmer%252BVohra%252B%2526%252BCompany%252BLimited%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGOmZ9dAGIjA-7rHxNRTWgJm_9qPj7p42v9EY2qLt1lr0h3maRWmdZgTytqGFfa0OEHadVkZuzl4yBmpjbmRyUloBQw
+2026-06-01 14:12:09,807 | ERROR | Search lookup failed for JSCLR1
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DJahangi%252BSidd%2528R%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGOqZ9dAGIjArbvHYj6hvhH5iPYrS_DzqIgdAA1rqyfzSBTRqB-u_jHa8GD5NsNDL7gz9i-By7HQyBmpjbmRyUloBQw
+2026-06-01 14:12:09,811 | ERROR | Search error for JSCLR1: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DJahangi%252BSidd%2528R%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGOqZ9dAGIjArbvHYj6hvhH5iPYrS_DzqIgdAA1rqyfzSBTRqB-u_jHa8GD5NsNDL7gz9i-By7HQyBmpjbmRyUloBQw
+2026-06-01 14:12:11,545 | ERROR | Search lookup failed for KASBM
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DKASB%252BModaraba%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGOuZ9dAGIjA64LtY-1aD-pOJDRVwSAAVFGdUniBx0sG0X5CjDrpjHO0PwNMHZp9yAs3J_pWG-K0yBmpjbmRyUloBQw
+2026-06-01 14:12:11,546 | ERROR | Search error for KASBM: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DKASB%252BModaraba%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGOuZ9dAGIjA64LtY-1aD-pOJDRVwSAAVFGdUniBx0sG0X5CjDrpjHO0PwNMHZp9yAs3J_pWG-K0yBmpjbmRyUloBQw
+2026-06-01 14:12:12,998 | ERROR | Search lookup failed for LSEPL
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DLSE%252BProptech%252BLimited%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGO2Z9dAGIjD4rXq2aJj63GBCQRYxk54jlYjWt_I7gobskSQpX3yW9kKCqCV6mGBvztFX6K9RDmsyBmpjbmRyUloBQw
+2026-06-01 14:12:13,000 | ERROR | Search error for LSEPL: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DLSE%252BProptech%252BLimited%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGO2Z9dAGIjD4rXq2aJj63GBCQRYxk54jlYjWt_I7gobskSQpX3yW9kKCqCV6mGBvztFX6K9RDmsyBmpjbmRyUloBQw
+2026-06-01 14:12:14,444 | ERROR | Search lookup failed for META
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DMetaTech%252BTrading%252BLimited%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGO6Z9dAGIjDPx1aJ2avexl7p2FGIeb6DYmvH6S1jLSklqvzKyUFHb_EImLlBDj5I5-JeyKCbzxAyBmpjbmRyUloBQw
+2026-06-01 14:12:14,446 | ERROR | Search error for META: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DMetaTech%252BTrading%252BLimited%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGO6Z9dAGIjDPx1aJ2avexl7p2FGIeb6DYmvH6S1jLSklqvzKyUFHb_EImLlBDj5I5-JeyKCbzxAyBmpjbmRyUloBQw
+2026-06-01 14:12:16,000 | ERROR | Search lookup failed for MLCFR1
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DMaple%252BLeaf%252B%2528R%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGPCZ9dAGIjBnuc4v0dGqDwFJDiJ2KEVyGsVcdYeaiE8utRowsm9q1yn8_afwdKtL8ptzlBSQwbEyBmpjbmRyUloBQw
+2026-06-01 14:12:16,002 | ERROR | Search error for MLCFR1: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DMaple%252BLeaf%252B%2528R%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGPCZ9dAGIjBnuc4v0dGqDwFJDiJ2KEVyGsVcdYeaiE8utRowsm9q1yn8_afwdKtL8ptzlBSQwbEyBmpjbmRyUloBQw
+2026-06-01 14:12:17,368 | ERROR | Search lookup failed for MODAM
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DModaraba%252BAl-Mali%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGPKZ9dAGIjCnElwMm3weuu_qNqB3IWg-Myvxef3AzhDp8SbKuRl3VQkaZ3VZnKsEyWBhVly_HhsyBmpjbmRyUloBQw
+2026-06-01 14:12:17,372 | ERROR | Search error for MODAM: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DModaraba%252BAl-Mali%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGPKZ9dAGIjCnElwMm3weuu_qNqB3IWg-Myvxef3AzhDp8SbKuRl3VQkaZ3VZnKsEyWBhVly_HhsyBmpjbmRyUloBQw
+2026-06-01 14:12:19,788 | ERROR | Search lookup failed for MOIL
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DMorafco%252BIndustries%252BLimited%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGPSZ9dAGIjCrg_kNIZxUyMYmhzl6K6P7i0ifg78P-_MKRlyNa81dYmUdGq0aHWPGZ4QKO6H9hngyBmpjbmRyUloBQw
+2026-06-01 14:12:19,790 | ERROR | Search error for MOIL: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DMorafco%252BIndustries%252BLimited%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGPSZ9dAGIjCrg_kNIZxUyMYmhzl6K6P7i0ifg78P-_MKRlyNa81dYmUdGq0aHWPGZ4QKO6H9hngyBmpjbmRyUloBQw
+2026-06-01 14:12:21,177 | ERROR | Search lookup failed for MUGHALR1
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DMughal%252BIron%252B%2528R%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGPWZ9dAGIjA21oK0shfCzB-Qs3uYhkoJPTj-GyGrBGa9ZcTVnuy2FapQF2_n7enPnq870rbpGoQyBmpjbmRyUloBQw
+2026-06-01 14:12:21,178 | ERROR | Search error for MUGHALR1: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DMughal%252BIron%252B%2528R%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGPWZ9dAGIjA21oK0shfCzB-Qs3uYhkoJPTj-GyGrBGa9ZcTVnuy2FapQF2_n7enPnq870rbpGoQyBmpjbmRyUloBQw
+2026-06-01 14:12:22,633 | ERROR | Search lookup failed for PAKMI
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DFirst%252BPak%252BModaraba%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGPeZ9dAGIjAqO0B52MVhOKb-TP_W1PWG-jQO2vmADXV0Z4zL2OPxhZf-sMyjsccRnZ1hnMh2PYIyBmpjbmRyUloBQw
+2026-06-01 14:12:22,634 | ERROR | Search error for PAKMI: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DFirst%252BPak%252BModaraba%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGPeZ9dAGIjAqO0B52MVhOKb-TP_W1PWG-jQO2vmADXV0Z4zL2OPxhZf-sMyjsccRnZ1hnMh2PYIyBmpjbmRyUloBQw
+2026-06-01 14:12:23,883 | ERROR | Search lookup failed for PDGH
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DPrudential%252BDiscourt%252B%2526%252BGuarantee%252BHouse%252BLt%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGPiZ9dAGIjDRhIA-UPt9XaO-RNxqBq8h2tOH25Tr8EYy0sTpB074fpub__DT07Blt7LhkTR_ehQyBmpjbmRyUloBQw
+2026-06-01 14:12:23,887 | ERROR | Search error for PDGH: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DPrudential%252BDiscourt%252B%2526%252BGuarantee%252BHouse%252BLt%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGPiZ9dAGIjDRhIA-UPt9XaO-RNxqBq8h2tOH25Tr8EYy0sTpB074fpub__DT07Blt7LhkTR_ehQyBmpjbmRyUloBQw
+2026-06-01 14:12:25,846 | ERROR | Search lookup failed for PIAA
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DPakistan%252BInternational%252BAirlines%252BCorp%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGPmZ9dAGIjBjAg4gbwpyqX-5DIY5UE_5Xrpg2X-_HS9exM1d5Xr92vM81ZP7PPB9au1H1KQFGB4yBmpjbmRyUloBQw
+2026-06-01 14:12:25,849 | ERROR | Search error for PIAA: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DPakistan%252BInternational%252BAirlines%252BCorp%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGPmZ9dAGIjBjAg4gbwpyqX-5DIY5UE_5Xrpg2X-_HS9exM1d5Xr92vM81ZP7PPB9au1H1KQFGB4yBmpjbmRyUloBQw
+2026-06-01 14:12:27,137 | ERROR | Search lookup failed for PIAB
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DPakistan%252BInternational%252BAirlines%252BCorporat%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGPuZ9dAGIjBOJONFJU0D5E029ael7iEt3h4YfAILDNAleM_hcd33cvI5P7WzWsgdQ6_uLkJGtQcyBmpjbmRyUloBQw
+2026-06-01 14:12:27,139 | ERROR | Search error for PIAB: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DPakistan%252BInternational%252BAirlines%252BCorporat%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGPuZ9dAGIjBOJONFJU0D5E029ael7iEt3h4YfAILDNAleM_hcd33cvI5P7WzWsgdQ6_uLkJGtQcyBmpjbmRyUloBQw
+2026-06-01 14:12:28,557 | ERROR | Search lookup failed for PRLR1
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DPak%252BRefinery%252B%2528R%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGP2Z9dAGIjCg-s5rIxS2ZAyZaPY50R-KyV_VJHR5Q9MGffXD1x01ox8fpGykLpt8utLQkUBCu2AyBmpjbmRyUloBQw
+2026-06-01 14:12:28,558 | ERROR | Search error for PRLR1: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DPak%252BRefinery%252B%2528R%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGP2Z9dAGIjCg-s5rIxS2ZAyZaPY50R-KyV_VJHR5Q9MGffXD1x01ox8fpGykLpt8utLQkUBCu2AyBmpjbmRyUloBQw
+2026-06-01 14:12:30,211 | ERROR | Search lookup failed for SEARLR1
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DSearl%252BCompany%2528R%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGP6Z9dAGIjBHjv9qh-1hCx9bgb-ZCfyp48cTGB7JuGNIwVWBEMGLuqlkc6BI_RZFjFuMnvxOHQ8yBmpjbmRyUloBQw
+2026-06-01 14:12:30,212 | ERROR | Search error for SEARLR1: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DSearl%252BCompany%2528R%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGP6Z9dAGIjBHjv9qh-1hCx9bgb-ZCfyp48cTGB7JuGNIwVWBEMGLuqlkc6BI_RZFjFuMnvxOHQ8yBmpjbmRyUloBQw
+2026-06-01 14:12:31,824 | ERROR | Search lookup failed for TCORPR1
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DTariq%252BCorporation%252B%2528Pvt%2529%252BLtd%252B%2528R%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGICa9dAGIjDxiHtEX2N5Q9cUPxglWKjyq1A_JIIMt6Dg4pYZfSx6RhFsXReFx0SpUlPOL4fvp7MyBmpjbmRyUloBQw
+2026-06-01 14:12:31,828 | ERROR | Search error for TCORPR1: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DTariq%252BCorporation%252B%2528Pvt%2529%252BLtd%252B%2528R%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGICa9dAGIjDxiHtEX2N5Q9cUPxglWKjyq1A_JIIMt6Dg4pYZfSx6RhFsXReFx0SpUlPOL4fvp7MyBmpjbmRyUloBQw
+2026-06-01 14:12:33,352 | ERROR | Search lookup failed for UBLGSFO
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3D%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGIGa9dAGIjB7i0wIaq-zIC8zjEi6Syz-wgiENY7X2NbZrpjpK_q5-hIoYRvLx06szysgI0eMkuQyBmpjbmRyUloBQw
+2026-06-01 14:12:33,354 | ERROR | Search error for UBLGSFO: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3D%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGIGa9dAGIjB7i0wIaq-zIC8zjEi6Syz-wgiENY7X2NbZrpjpK_q5-hIoYRvLx06szysgI0eMkuQyBmpjbmRyUloBQw
+2026-06-01 14:12:34,783 | ERROR | Search lookup failed for UNITYR1
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DUnity%252BFoods%2528R%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGIOa9dAGIjCc3jqCFnu2cmEr7Pg-6s6ZJWRvCg4y-uDILJiX07v7QOyv2I2Vcv8nP6vbvkoz6vgyBmpjbmRyUloBQw
+2026-06-01 14:12:34,785 | ERROR | Search error for UNITYR1: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DUnity%252BFoods%2528R%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGIOa9dAGIjCc3jqCFnu2cmEr7Pg-6s6ZJWRvCg4y-uDILJiX07v7QOyv2I2Vcv8nP6vbvkoz6vgyBmpjbmRyUloBQw
+2026-06-01 14:12:36,317 | ERROR | Search lookup failed for WAVESR1
+Traceback (most recent call last):
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\data\sector_classifier.py", line 103, in classify_sector_with_search
+    search_results = list(google_search(query, num_results=3, lang="en", advanced=True))
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 54, in search
+    resp = _req(escaped_term, num_results - start,
+                lang, start, proxies, timeout)
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\googlesearch\__init__.py", line 23, in _req
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sajjad Ur Rehman\Desktop\PSX Halal Screener\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DWaves%252BSinger%252BPakistan%252BLimited%252B%2528R%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGISa9dAGIjDz7PJRxPaK1HCcehZo6a5XQsAZAWjg9oOTG86Y1KLCUWEOWTZQH56jnB_siMqclmoyBmpjbmRyUloBQw
+2026-06-01 14:12:36,319 | ERROR | Search error for WAVESR1: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DWaves%252BSinger%252BPakistan%252BLimited%252B%2528R%2529%252BPSX%252BPakistan%252Bbusiness%252Bactivities%26num%3D5%26hl%3Den%26start%3D0&hl=en&q=EhAkB9AABAPxJpHEuU1LdChcGISa9dAGIjDz7PJRxPaK1HCcehZo6a5XQsAZAWjg9oOTG86Y1KLCUWEOWTZQH56jnB_siMqclmoyBmpjbmRyUloBQw
+2026-06-01 14:12:58,763 | ERROR | Pipeline finished with 719 rows
